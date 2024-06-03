@@ -100,13 +100,27 @@ li{
   align-items: center;
   gap: 32px;
   flex-wrap: nowrap;
-
  }
 
  nav ul a{
   font-size: 16px;
   font-family: "Noto Sans", sans-serif;
   color: #ffff;
+ }
+
+ nav label{
+  font-size: 25px;
+  color: #F5F5F5;
+  cursor: pointer;
+ }
+
+ nav .menu-btn,
+ nav .close-btn{
+  display: none;
+ }
+
+ #click{
+  display: none;
  }
 /* hero section*/
  .hero-section{
@@ -359,4 +373,47 @@ li{
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   padding: 20px;
+}
+
+/* meadi query*/
+@media only screen and (max-width: 1024px){
+  .section-container{
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  nav .menu-btn{
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul{
+    display: block;
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    z-index: 999;
+  }
+
+  nav ul li{
+    margin: 20px 0;
+  }
+
+  nav ul li a{
+    color: #000;
+    font-size: 25px;
+  }
+
 }
